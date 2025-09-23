@@ -69,7 +69,7 @@ const HowItWorks = () => {
   ];
 
   return (
-  <section id="how-it-works" className="py-32 flex flex-col justify-center items-center text-center" style={{ backgroundColor: '#F9F6F2', minHeight: '200px' }}>
+  <section id="how-it-works" className="py-40 flex flex-col justify-center items-center text-center" style={{ backgroundColor: '#F9F6F2', minHeight: '200px', paddingTop: '10rem' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <div className="text-center mb-16 w-full">
           <h2
@@ -84,7 +84,7 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        <div className="flex flex-row items-center justify-center gap-8 mb-16 w-full">
+  <div className="flex flex-row items-center justify-center gap-8 mb-16 w-full" style={{ marginTop: '4rem' }}>
   {steps.map((step, index) => (
     <React.Fragment key={index}>
       <div data-aos="fade-up" data-aos-delay={step.delay} className="text-center group min-w-[220px]">
