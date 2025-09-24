@@ -1,22 +1,28 @@
-// Utility to send form data to Formspree endpoint
-// Replace 'your_form_id' with your actual Formspree form ID
+import emailjs from 'emailjs-com';
 
-export async function sendEmail({ firstName, lastName, email, helpText }) {
-  const formId = 'mzbnqzqv'; // Replace with your Formspree form ID if needed
-  const endpoint = `https://formspree.io/f/${formId}`;
-  const data = {
-    firstName,
-    lastName,
-    email,
-    message: helpText,
+// Replace these with your actual EmailJS credentials
+const SERVICE_ID = 'service_292m1ck';
+const TEMPLATE_ID = 'template_9g4635r';
+const PUBLIC_KEY = 'Jpm0JZQENzZnCAjWK';
+
+// This function sends an email using EmailJS
+export const sendEmail = async ({ firstName, lastName, email }) => {
+  const templateParams = {
+    first_name: firstName,
+    last_name: lastName,
+    user_email: email,
+    to_email: 'support@waynova.ai', // This ensures the email is sent to support@waynova.ai
   };
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-  return response.json();
-}
+
+  try {
+    const response = await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      templateParams,
+      PUBLIC_KEY
+    );
+    return { success: true, response };
+  } catch (error) {
+    return { success: false, error };
+  }
+};

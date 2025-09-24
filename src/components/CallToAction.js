@@ -37,7 +37,7 @@ const CallToAction = () => {
     }
     setIsSubmitting(true);
     try {
-      const result = await sendEmail({ firstName, lastName, email, helpText });
+      const result = await sendEmail({ firstName, lastName, email });
       if (result.ok || result.success) {
         showMessage('Thank you! Your message has been sent to our team.', 'success');
         setEmail('');
@@ -120,18 +120,7 @@ const CallToAction = () => {
                 />
               </div>
               <div className="flex flex-col items-start w-full">
-                <label className="block text-gray-700 text-sm font-medium mb-1 w-full text-left">
-                  How can we help? <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  value={helpText}
-                  onChange={e => setHelpText(e.target.value)}
-                  placeholder="How can we help?"
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 resize-none"
-                  rows={3}
-                  required
-                  disabled={isSubmitting}
-                />
+                {/* Removed 'How can we help?' text box */}
               </div>
             </div>
             <button
