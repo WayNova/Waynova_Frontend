@@ -4,7 +4,7 @@ A modern, professional, and interactive React landing page for Waynova, a SaaS p
 
 ## 🚀 Live Demo
 
-Visit the live website at: [Your deployment URL will appear here after publishing]
+Visit the live website at: [https://waynova.ai/]
 
 ## 📋 Project Overview
 
