@@ -68,7 +68,7 @@ const CallToAction = () => {
             Ready to Transform Your Sales Process?
           </h2>
           <p className="text-xl md:text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Join hundreds of sales professionals who are already accelerating their public sector success with WayNo
+            Join hundreds of sales professionals who are already accelerating their public sector success with WayNova
           </p>
         </div>
         
