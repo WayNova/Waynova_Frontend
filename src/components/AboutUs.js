@@ -11,7 +11,7 @@ const AboutUs = () => {
         </div>
         <div className="text-2xl text-gray-700 text-center max-w-5xl mx-auto mt-4 leading-relaxed">
           <div>
-            WayNova’s mission is to help sales reps focus on the right leads by revealing not just who to contact but who has the funding to buy. By adding the missing grant layer to the sales stack, we boost rep efficiency, shorten sales cycles, and unlock more closed deals.
+            WayNova’s mission is to help sales reps focus on the right leads by revealing not just who to contact but who has the funding to buy. By adding the missing grant layer to the sales stack, we boost rep efficiency, shorten sales cycles, and unlock more closed deals
           </div>
         </div>
       </div>
