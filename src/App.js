@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AddBuyerProfiles from './components/AddBuyerProfiles';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -40,16 +42,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navigation scrollToDemo={scrollToDemo} />
-      <Hero scrollToDemo={scrollToDemo} scrollToSimulator={scrollToSimulator} />
-  <HowItWorks />
-  <Simulator scrollToDemo={scrollToDemo} />
-  <Features />
-  <AboutUs />
-      <CallToAction />
-    </div>
-    
+    <Router>
+      <Routes>
+        <Route path="/add-buyer-profiles" element={<AddBuyerProfiles />} />
+        <Route path="/" element={
+          <div className="App">
+            <Navigation scrollToDemo={scrollToDemo} />
+            <Hero scrollToDemo={scrollToDemo} scrollToSimulator={scrollToSimulator} />
+            <HowItWorks />
+            <Simulator scrollToDemo={scrollToDemo} />
+            <Features />
+            <AboutUs />
+            <CallToAction />
+          </div>
+        } />
+      </Routes>
+    </Router>
   );
 }
 

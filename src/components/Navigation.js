@@ -62,7 +62,7 @@ const Navigation = ({ scrollToDemo }) => {
             </button>
           </div>
           {/* Centered navigation links */}
-          <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-8">
+          <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 space-x-8 whitespace-nowrap">
             <button 
               onClick={() => scrollToSection('how-it-works')}
               className="nav-link-btn text-white hover:text-[#E6E6FA] px-3 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:outline-none relative bg-transparent border-none"
@@ -102,6 +102,17 @@ const Navigation = ({ scrollToDemo }) => {
               style={{ position: 'relative', background: 'transparent', border: 'none' }}
             >
               <span className="relative z-10">About Us</span>
+              <span
+                className="nav-link-underline absolute left-1/2 -translate-x-1/2 bottom-1 h-1 w-full rounded-full pointer-events-none transition-all duration-200"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              onClick={() => window.location.href = '/add-buyer-profiles'}
+              className="nav-link-btn text-white hover:text-[#E6E6FA] px-3 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:outline-none relative bg-transparent border-none"
+              style={{ position: 'relative', background: 'transparent', border: 'none' }}
+            >
+              <span className="relative z-10">Add Buyer Profile</span>
               <span
                 className="nav-link-underline absolute left-1/2 -translate-x-1/2 bottom-1 h-1 w-full rounded-full pointer-events-none transition-all duration-200"
                 aria-hidden="true"
