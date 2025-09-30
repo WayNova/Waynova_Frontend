@@ -1007,7 +1007,7 @@ const AddBuyerProfiles = () => {
                   if (e.target.value) setErrors(prev => ({ ...prev, firstName: '' }));
                 }}
                 placeholder="First Name"
-                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none bg-white"
                 required
               />
               {errors.firstName && (
@@ -1023,7 +1023,7 @@ const AddBuyerProfiles = () => {
                 value={userDetails.lastName}
                 onChange={e => setUserDetails({ ...userDetails, lastName: e.target.value })}
                 placeholder="Last Name"
-                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none bg-white"
                 required
               />
 
@@ -1036,7 +1036,7 @@ const AddBuyerProfiles = () => {
                 value={userDetails.email}
                 onChange={e => setUserDetails({ ...userDetails, email: e.target.value })}
                 placeholder="Email ID"
-                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                className="border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none bg-white"
                 required
               />
 
