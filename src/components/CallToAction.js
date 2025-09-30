@@ -123,6 +123,15 @@ const CallToAction = () => {
                 {/* Removed 'How can we help?' text box */}
               </div>
             </div>
+                {/* Mobile-only Add Buyer Profile button above Submit */}
+                <button
+                  type="button"
+                  className="md:hidden block w-full text-[#0A2240] text-base font-semibold bg-transparent border-none p-0 mb-2"
+                  style={{ boxShadow: 'none', outline: 'none' }}
+                  onClick={() => window.location.href = '/add-buyer-profiles'}
+                >
+                  Add Buyer Profile
+                </button>
             <button
               type="submit"
               disabled={isSubmitting}
