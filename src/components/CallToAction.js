@@ -123,23 +123,23 @@ const CallToAction = () => {
                 {/* Removed 'How can we help?' text box */}
               </div>
             </div>
-                {/* Mobile-only Add Buyer Profile button above Submit */}
-                <button
-                  type="button"
-                  className="md:hidden block w-full text-[#0A2240] text-base font-semibold bg-transparent border-none p-0 mb-2"
-                  style={{ boxShadow: 'none', outline: 'none' }}
-                  onClick={() => window.location.href = '/add-buyer-profiles'}
-                >
-                  Add Buyer Profile
-                </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm mt-0 disabled:opacity-50 disabled:cursor-not-allowed"
               style={{ minWidth: '100px' }}
             >
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
+                {/* Mobile-only Add Buyer Profile button at the very bottom */}
+                <button
+                  type="button"
+                  className="md:hidden block w-full text-[#3a5a8c] hover:text-[#0A2240] text-base font-semibold bg-transparent border-none p-0 mt-3 transition-colors duration-200"
+                  style={{ boxShadow: 'none', outline: 'none' }}
+                  onClick={() => window.location.href = '/add-buyer-profiles'}
+                >
+                  Help us Test: Add Buyer Profile
+                </button>
           </form>
           
           {/* Success/Error Message */}
