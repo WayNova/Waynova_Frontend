@@ -52,7 +52,7 @@ const AddBuyerProfiles = () => {
   ];
   const [form, setForm] = useState({
     agencyName: '',
-    cageDuns: '',
+    ueiCage: '',
     agencyType: '',
     agencyTypeOther: '',
     state: '',
@@ -92,7 +92,6 @@ const AddBuyerProfiles = () => {
 
   const handleSubmit = (e) => {
   e.preventDefault();
-  // Validate first name on submit
   if (!userDetails.firstName) {
     setErrors(prev => ({ ...prev, firstName: 'Please fill in required fields' }));
     return;
@@ -102,7 +101,7 @@ const AddBuyerProfiles = () => {
       if (result.success) {
         setForm({
           agencyName: '',
-          cageDuns: '',
+          ueiCage: '',
           agencyType: '',
           agencyTypeOther: '',
           state: '',
@@ -212,15 +211,15 @@ const AddBuyerProfiles = () => {
             <span className="text-red-500 text-xs mt-1">{errors.agencyName}</span>
           )}
           <label className="block text-gray-700 text-sm font-medium mb-0 p-0" style={{marginBottom: '1px', paddingBottom: 0, display: 'flex', alignItems: 'flex-start'}}>
-            CAGE / DUNS #
+            UEI / CAGE # 
           </label>
           <input
             type="text"
-            name="cageDuns"
-            value={form.cageDuns}
+            name="ueiCage"
+            value={form.ueiCage}
             onChange={handleChange}
-            placeholder="CAGE / DUNS # (if known)"
-            className={`border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none placeholder-gray-400 ${form.cageDuns ? 'text-gray-800' : 'text-gray-400'}`}
+            placeholder="UEI / CAGE # (if known)"
+            className={`border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none placeholder-gray-400 ${form.ueiCage ? 'text-gray-800' : 'text-gray-400'}`}
           />
           <label className="block text-gray-700 text-sm font-medium mb-0 p-0" style={{marginBottom: '1px', paddingBottom: 0, display: 'flex', alignItems: 'flex-start'}}>
             Agency Type <span className="text-red-500">*</span>
@@ -871,6 +870,22 @@ const AddBuyerProfiles = () => {
                 value={form.fireFemaDisaster}
                 onChange={handleChange}
                 className={`border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none mb-3.5 ${form.fireFemaDisaster ? 'text-gray-800' : 'text-gray-400'}`}
+                style={{ appearance: 'none' }}
+                required
+              >
+                <option value="" disabled className="text-gray-400">Select Option</option>
+                <option value="Yes" className="text-gray-800">Yes</option>
+                <option value="No" className="text-gray-800">No</option>
+              </select>
+              {/* Opportunity Zone? */}
+              <label className="block text-gray-700 text-sm font-medium mb-0" style={{display: 'flex', alignItems: 'flex-start'}}>
+                Opportunity Zone?
+              </label>
+              <select
+                name="opportunityZone"
+                value={form.opportunityZone}
+                onChange={handleChange}
+                className={`border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-gray-300 focus:outline-none mb-3.5 ${form.opportunityZone ? 'text-gray-800' : 'text-gray-400'}`}
                 style={{ appearance: 'none' }}
                 required
               >

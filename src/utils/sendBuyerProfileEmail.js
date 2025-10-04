@@ -9,7 +9,7 @@ const PUBLIC_KEY = 'Jpm0JZQENzZnCAjWK';
 export const sendBuyerProfileEmail = async ({ form, userDetails }) => {
   const templateParams = {
     agencyName: form.agencyName,
-    cageDuns: form.cageDuns,
+    ueiCage: form.ueiCage, // Updated from cageDuns
     agencyType: form.agencyType,
     agencyTypeOther: form.agencyTypeOther,
     state: form.state,
