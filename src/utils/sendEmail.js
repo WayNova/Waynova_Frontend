@@ -1,7 +1,7 @@
 import emailjs from 'emailjs-com';
 
 // Replace these with your actual EmailJS credentials
-const SERVICE_ID = 'service_292m1ck';
+const SERVICE_ID = 'service_aramg44';
 const TEMPLATE_ID = 'template_9g4635r';
 const PUBLIC_KEY = 'Jpm0JZQENzZnCAjWK';
 
